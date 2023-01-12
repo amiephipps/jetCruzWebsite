@@ -45,11 +45,12 @@
       }
 
       .flexParent {
-        height: 90%;
+        height: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: column;
+        position: relative;
       }
 
       /* .flexParent::before {
@@ -63,9 +64,30 @@
         background-color: black;
         opacity: 0.6;
       } */
+
+      video {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      .flexParent::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
     </style>
     <div class="flexParent">
       <h1>JET CRUZ</h1>
+      <video src="./jetVid.mp4" autoplay loop muted></video>
       <!-- <a href="mailto:me@amiephipps.com">me@amiephipps.com</a> -->
     </div>
   </body>
