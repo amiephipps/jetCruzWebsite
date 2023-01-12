@@ -88,10 +88,14 @@
 
     <div class="flexParent">
       <h1>JET CRUZ</h1>
-      <video controls="false" autoplay loop muted playsinline>
+      <!-- <video autoplay loop muted playsinline id="jetsVideo"> -->
+      <video playsinline preload muted loop id="jetsVideo">
         <source src="./jetVid.mp4" type="video/mp4" />
       </video>
       <!-- <a href="mailto:me@amiephipps.com">me@amiephipps.com</a> -->
     </div>
   </body>
+  <script>
+    document.getElementById("jetsVideo").setAttribute("autoplay", "autoplay");
+  </script>
 </html>
